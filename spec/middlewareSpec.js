@@ -61,7 +61,7 @@ describe('middlewareSpec', function() {
       /*
          <html>
           <head>
-              <script src="components/zoo/zoo.js"></script><script src="components/bar/bar.js"></script><script src="components/moo/moo.js"></script><script src="components/foo/foo.js"></script>
+              <script src="/components/zoo/zoo.js"></script><script src="/components/bar/bar.js"></script><script src="/components/moo/moo.js"></script><script src="components/foo/foo.js"></script>
           </head>
           <body>
           </body>

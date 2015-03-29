@@ -26,10 +26,44 @@ var resolver = function(fs) {
     var fileContent = fs.readFileSync(jsFile);
     var modules = flatten(extractModules(fileContent.toString()).map(moduleDepsToPath));
 
-    return uniq(flatten(modules.map(getModules)).concat(modules));
+    var getModuleFiles = function(modulePath) {
+      var hasFolder = function(folderName) {
+        return fs.existsSync(
+          path.join(path.dirname(modulePath), folderName));
+      };
+
+      var readFolder = function(folderName) {
+        var folderPath = path.join(path.dirname(modulePath), folderName);
+
+        return fs.readdirSync(folderPath).map(function(file) {
+          return path.join(folderPath, file);
+        });
+      };
+
+      var files = [];
+
+      if (hasFolder('service')) {
+        files = files.concat(readFolder('service'));
+      }
+
+      if (hasFolder('filter')) {
+        files = files.concat(readFolder('filter'));
+      }
+
+      if (hasFolder('directive')) {
+        files = files.concat(readFolder('directive'));
+      }
+
+      return files;
+    };
+
+
+    return uniq(flatten(modules.map(getModules))
+      .concat(modules)
+      .concat(flatten(modules.map(getModuleFiles))));
   };
 
-  getModules.currentWorkingDirectory = '';
+  getModules.currentWorkingDirectory = '/';
   getModules.externalModulesMap = {};
 
   getModules.setCurrentWorkingDirectory = function(cwd) {
