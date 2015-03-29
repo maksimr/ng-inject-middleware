@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "connect": "^2.0.3",
     "eof": "0.0.3",
     "jasmine-node": "^2.0.0",
     "mocks": "0.0.15"

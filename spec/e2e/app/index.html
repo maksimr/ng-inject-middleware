@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src="lib/angular.js"></script>
+        <script src="components/foo.js"></script>
+
+        <script>
+            angular.module('test', ['components.foo'])
+                .controller('Test', function($scope)
+                {
+                    $scope.text = 'Hello World';
+                });
+        </script>
+    </head>
+
+    <body ng-controller="Test">
+        <div id='text'>
+            {{text}}
+        </div>
+    </body>
+
+</html>
