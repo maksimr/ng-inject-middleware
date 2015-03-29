@@ -1,0 +1,16 @@
+{
+  "name": "ng-inject-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ngInject.js",
+  "scripts": {
+    "test": "jasmine-node spec/ --autoTest --noStackTrace"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eof": "0.0.3",
+    "jasmine-node": "^2.0.0",
+    "mocks": "0.0.15"
+  }
+}
