@@ -1,6 +1,6 @@
 describe('extractScriptsSpec', function() {
   var eof = require('eof');
-  var extractJavascriptFiles = require('../../lib/extractScripts').extractJavascriptFiles;
+  var extractJavascriptFiles = require('../../../lib/extractScripts').extractJavascriptFiles;
 
   it('should extract javascript files from html', function() {
     expect(extractJavascriptFiles(eof.extract(function() {

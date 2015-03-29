@@ -1,6 +1,6 @@
 describe('moduleResolverSpec', function() {
   var mocks = require('mocks');
-  var moduleResolver = require('../src/middleware').resolver;
+  var moduleResolver = require('../../src/middleware').resolver;
 
   beforeEach(function() {
     var componentsFileList = {

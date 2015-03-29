@@ -4,7 +4,8 @@
   "description": "",
   "main": "ngInject.js",
   "scripts": {
-    "test": "jasmine-node spec/ --autoTest --noStackTrace"
+    "test": "jasmine-node spec/ ",
+    "test-watch": "jasmine-node spec/ --autoTest --noStackTrace"
   },
   "author": "",
   "license": "ISC",

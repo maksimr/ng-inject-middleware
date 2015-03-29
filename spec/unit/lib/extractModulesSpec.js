@@ -1,6 +1,6 @@
 describe('extractModules', function() {
   var eof = require('eof');
-  var extractModules = require('../../lib/extractModules').extractModules;
+  var extractModules = require('../../../lib/extractModules').extractModules;
   var ngModuleCreate = extractModules.ngModuleCreate;
 
   it('should extract angular modules from file content', function() {

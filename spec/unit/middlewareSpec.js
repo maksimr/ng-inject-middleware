@@ -1,7 +1,7 @@
 describe('middlewareSpec', function() {
   var eof = require('eof');
   var mocks = require('mocks');
-  var middlewareFactory = require('../src/middleware').middlewareFactory;
+  var middlewareFactory = require('../../src/middleware').middlewareFactory;
 
   beforeEach(function() {
     var componentsFileList = {
